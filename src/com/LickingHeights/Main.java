@@ -8,5 +8,14 @@ public class Main {
 
         Scanner keyboard;
         keyboard = new Scanner(System.in);
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
     }
 }
