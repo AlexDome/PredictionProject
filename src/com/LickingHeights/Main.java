@@ -18,6 +18,7 @@ public class Main {
         System.out.println("But the child born on the Sabbath Day,");
         System.out.println("Is fair and wise and good in every way.");
 
-        
+        System.out.println("Let's see what day of the week you were born on.");
+        System.out.println("What month were you born in? Please enter as a number 1-12");
     }
 }
