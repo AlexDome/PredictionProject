@@ -31,6 +31,11 @@ public class Main {
         System.out.println("Can you give me the day you were born on? Please give it to me as a number");
         userDay = keyboard.nextInt();
         System.out.println("Thank you.");
+        System.out.println();
+
+        System.out.println("There are "+ +" days in " + + ".");
+        System.out.println("Of these days you were born on a "+ +".");
+        
 
 
     }
@@ -54,6 +59,9 @@ public class Main {
             case 11:
             case 12:
                 return userMonth;
+
+            default:
+                return 0;
         }
     }
 
@@ -66,7 +74,7 @@ public class Main {
             int K = (userYear % 100);
             int J = (userYear / 100);
 
-            int weekDay = userDay + (13 * (userMonth2 + 1)) / 5 + K + (K / 4) + (J / 4) - (-2 * J);
+            int weekDay = (userDay + (13 * (userMonth2 + 1)) / 5 + K + (K / 4) + (J / 4) - (-2 * J)) % 7;
 
             return weekDay;
         }
@@ -98,8 +106,81 @@ public class Main {
                     return "November";
                 case 12:
                     return "December";
+
                 default:
                     return "";
+            }
+        }
+        public static String weekDays(int weekDay) {
+            switch (weekDay){
+                case 0:
+                    return "Saturday";
+                case 1:
+                    return "Sunday";
+                case 2:
+                    return "Monday";
+                case 3:
+                    return "Tuesday";
+                case 4:
+                    return "Wednesday";
+                case 5:
+                    return "Thursday";
+                case 6:
+                    return "Friday";
+
+                default:
+                    return "";
+            }
+        }
+        public static int monthDays(int userMonth){
+            switch (userMonth){
+                case 1:
+                    return 31;
+                case 2:
+                    return 28;
+                case 3:
+                    return 31;
+                case 4:
+                    return 30;
+                case 5:
+                    return 31;
+                case 6:
+                    return 31;
+                case 7:
+                    return 31;
+                case 8:
+                    return 31;
+                case 9:
+                    return 30;
+                case 10:
+                    return 31;
+                case 11:
+                    return 30;
+                case 12:
+                    return 31;
+
+            }
+            return monthDays(userMonth);
+        }
+        public static String daysPoem(int weekDay){
+            switch (weekDay){
+                case 2:
+                    return "According to the poem, Monday's child is fair of face.";
+                case 3:
+                    return "According to the poem, Tuesday's child is full of grace.";
+                case 4:
+                    return "According to the poem, Wednesday's child is full of woe.";
+                case 5:
+                    return "According to the poem, Thursday's child has far to go.";
+                case 6:
+                    return "According to the poem, Friday's child is loving and giving.";
+                case 0:
+                    return "According to the poem, Saturday's child works hard for a living.";
+                case 1:
+                    return "According to the poem, The child born on the Sabbath Day, Is fair and wise and good in every way.";
+
+                    default:
+                        return "";
             }
         }
     }
