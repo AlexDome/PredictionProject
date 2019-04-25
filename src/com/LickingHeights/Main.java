@@ -23,15 +23,15 @@ public class Main {
         System.out.println("But the child born on the Sabbath Day,");
         System.out.println("Is fair and wise and good in every way.");
         System.out.println();
-        
+
         System.out.println("Let's see what day of the week you were born on.");
         System.out.println("What month were you born in? Please enter as a number 1-12");
         userMonth = keyboard.nextInt();
 
         System.out.println("You were born in "+userMonth+".");
-        System.out.println("Can you give me the day you were born on? Please give it to me as a number");
+        System.out.println("There are "+" in "+userMonth+". Can you give me the day you were born on? Please give it to me as a number");
         userDay = keyboard.nextInt();
-        System.out.println("");
+
 
 
 
@@ -42,7 +42,6 @@ public class Main {
         switch (userMonth) {
             case 1:
                 return 13;
-
             case 2:
                 return 14;
 
@@ -175,7 +174,7 @@ public class Main {
                 case 0:
                     return "According to the poem, Saturday's child works hard for a living.";
                 case 1:
-                    return "According to the poem, The child born on the Sabbath Day, Is fair and wise and good in every way.";
+                    return "According to the poem, The child born on the Sabbath day, Sunday, is fair and wise and good in every way.";
 
                     default:
                         return "";
