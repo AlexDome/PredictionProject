@@ -12,7 +12,15 @@ public class Main {
         int userDay;
         int userMonth2;
         int userYear;
-
+        
+        while (true) {
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            
+            
+            
 
         System.out.println("Monday's child is fair of face.");
         System.out.println("Tuesday's child is full of grace.");
@@ -28,14 +36,16 @@ public class Main {
         System.out.println("What month were you born in? Please enter as a number 1-12");
         userMonth = keyboard.nextInt();
 
-        System.out.println("You were born in "+userMonth+".");
-        System.out.println("There are "+" in "+userMonth+". Can you give me the day you were born on? Please give it to me as a number");
+        System.out.println("What day in "+ printMonth(userMonth) +" were you born on?");
         userDay = keyboard.nextInt();
+        System.out.println("What year were you born in? Please write out the full year.");
+        userYear = keyboard.nextInt();
+            
+        System.out.println("The month of "+ printMonth(userMonth) +" has "+ monthDays(userMonth)+".")
+        System.out.println    
 
 
-
-
-
+        }
     }
     public static int userMonth2( int userMonth) {
 
