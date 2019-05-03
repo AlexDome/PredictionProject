@@ -36,15 +36,15 @@ public class Main {
         System.out.println("What month were you born in? Please enter as a number 1-12");
         userMonth = keyboard.nextInt();
 
-        System.out.println("What day in "+ printMonth(userMonth) +" were you born on?");
+        System.out.println("What day in "+ month(userMonth) +" were you born on?");
         userDay = keyboard.nextInt();
         System.out.println("What year were you born in? Please write out the full year.");
         userYear = keyboard.nextInt();
             
-        System.out.println("The month of "+ printMonth(userMonth) +" has "+ monthDays(userMonth)+".")
-        int tempIntValue = weekDay(userDay, userMonth, userYear)
+        System.out.println("The month of "+ month(userMonth) +" has "+ monthDays(userMonth)+" days.");
+        int tempIntValue = weekDay(userDay, userMonth, userYear);
         System.out.println("You were born on a "+ weekDays(tempIntValue));
-        System.out.println("According to the poem you "+ daysPoem(tempIntValue));
+        System.out.println(daysPoem(tempIntValue));
 
 
         }
@@ -83,7 +83,9 @@ public class Main {
             int K = (userYear % 100);
             int J = (userYear / 100);
 
-            int weekDay = (userDay + (13 * (userMonth2 + 1)) / 5 + K + (K / 4) + (J / 4) - (-2 * J)) % 7;
+            int weekDay = (userDay + (13 * (userMonth2 + 1)) / 5 + K + (K / 4) + (J / 4) - (-2 * J));
+
+            weekDay %=7;
 
             return weekDay;
         }
