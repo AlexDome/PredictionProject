@@ -30,7 +30,7 @@ public class Main {
         System.out.println("Saturday's child works hard for a living.");
         System.out.println("But the child born on the Sabbath Day,");
         System.out.println("Is fair and wise and good in every way.");
-        System.out.println();
+       
 
         System.out.println("Let's see what day of the week you were born on.");
         System.out.println("What month were you born in? Please enter as a number 1-12");
@@ -42,7 +42,9 @@ public class Main {
         userYear = keyboard.nextInt();
             
         System.out.println("The month of "+ printMonth(userMonth) +" has "+ monthDays(userMonth)+".")
-        System.out.println    
+        int tempIntValue = weekDay(userDay, userMonth, userYear)
+        System.out.println("You were born on a "+ weekDays(tempIntValue));
+        System.out.println("According to the poem you "+ daysPoem(tempIntValue));
 
 
         }
